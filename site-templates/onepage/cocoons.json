@@ -1,0 +1,71 @@
+{
+  "siteName"        : "One Page Site",
+  "port"            : 8080,
+  "source"          : "src",
+  "public"          : "public", 
+  "target"          : "target",
+  "favicon"         : "/images/favicon.png",
+  "previewEngine"   : "../fs/preview-fs.js",
+
+  "mindmapEngine": "../fs/mindmap-fs.js",
+  "mindmapConverter": "../mindmap/opml-converter.js",
+
+  "templateFolder"  : "templates",
+  "defaultTemplate" : "page.jade",
+  "templateEngine"  : "jade",
+
+  "homePage" : "index.html",
+  "notFoundPage"    : "404.html",
+  "errorPage"       : "500.html",
+
+  "menu" : {
+      "Menu1" : "/#xxx",
+      "Menu2" : "/#yyy",
+      "Menu3" : "/#zzz"
+  },
+
+  "imagemenu" : {
+      "href" : "/images/menu-image.jpg",
+      "alt"  : "Alt message for menu"
+  },
+
+  "widgetFolder" : "widgets",
+
+  "widgets" : [
+     {
+       "region" : "scripts",
+       "widgets" : [
+         {"order" : 1, "name" : "google-analytics.jade",
+           "properties" :  {
+             "gaid" : "UA-xxxx"
+           }
+
+         }
+       ]
+     }
+  ],
+
+  "htaccess" : {
+    "generate" : true,
+    "hideDirectories" : false,
+    "denyAccessToHtaccess" : false,
+    "rewrite" : {
+      "blockAccessHiddenDirectories" : true,
+      "withwww" : false
+    },
+    /*"authorizedFileTypes" : "html|json|xml|css|js|jpe?g|png|gif|pdf|docx|rtf|xls|odf|zip|rar",*/
+    /*"blockedIps" : ["111.111.11.11", "222.222.22.22"], */
+    "browserCache" : false
+
+  },
+  "ftp" : {
+    "host"                : "hostname", //using the ip adress is not working for the moment
+    "port"                : 21,
+    "user"                : "username",
+    "password"            : "password",
+    "folder"              : "folder", // Not mandatory
+    "deleteExistingfiles" : true
+
+
+  }
+}
