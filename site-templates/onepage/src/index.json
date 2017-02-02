@@ -1,1 +1,1 @@
-{  "template": "page.jade",  "description" : "This is the page description",  "title": "Page title " }
+{  "template": "page.pug",  "description" : "This is the page description",  "title": "Page title " }

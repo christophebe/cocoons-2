@@ -1,6 +1,6 @@
 
 ```widget
-{ "name" : "call2action-large.jade",
+{ "name" : "call2action-large.pug",
   "properties" : {
     "title" : "Hello World!",
     "text"  : "This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.",
@@ -10,7 +10,7 @@
 ```
 
 ```widget
-{ "name" : "boxes.jade",
+{ "name" : "boxes.pug",
   "properties" : {
     "boxes" : [
       {
@@ -41,7 +41,7 @@ The propreties of this page are in index.json (title, description, template to u
 
 
 ```widget
-{ "name" : "alert.jade",
+{ "name" : "alert.pug",
   "properties" : {
     "text" : "This is small text that can be used to focus on an important information"
   }

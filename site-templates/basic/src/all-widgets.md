@@ -2,7 +2,7 @@
 
 
 ```widget
-{ "name" : "carousel.jade",
+{ "name" : "carousel.pug",
   "properties" : {
     "id" : "id-carousel1",
     "images" : [
@@ -33,7 +33,7 @@
 
 
 ```widget
-{ "name" : "alert.jade",
+{ "name" : "alert.pug",
    "properties" : {
       "text"  : "alert message text"
    }
@@ -41,7 +41,7 @@
 ```
 
 ```widget
-{ "name" : "boxes.jade",
+{ "name" : "boxes.pug",
   "properties" : {
     "boxes" : [
       {
@@ -67,7 +67,7 @@
 Reponsive HTML 5 video
 
 ```widget
-{ "name" : "video.jade",
+{ "name" : "video.pug",
   "properties" : {
     "src"      : "/video/big_buck_bunny.mp4",
     "type"     : "video/mp4",
@@ -84,7 +84,7 @@ Reponsive HTML 5 video
 This is a small text
 
 ```widget
-{ "name" : "call2action-large.jade",
+{ "name" : "call2action-large.pug",
   "properties" : {
     "title" : "Title",
     "text"  : "Call to action large",
@@ -94,7 +94,7 @@ This is a small text
 ```
 
 ```widget
-{ "name" : "call2action.jade",
+{ "name" : "call2action.pug",
   "properties" : {
     "text" : "Call 2 action text",
     "link" : {
@@ -107,7 +107,7 @@ This is a small text
 
 ```widget
 {
-  "name" : "image-text-shadow.jade",
+  "name" : "image-text-shadow.pug",
   "properties" : {
     "title" : "title",
     "image" : {
@@ -122,7 +122,7 @@ This is a small text
 }
 ```
 ```widget
-{ "name" : "image-text.jade",
+{ "name" : "image-text.pug",
   "properties" : {
     "title" : "Title",
     "texts" : [
@@ -140,7 +140,7 @@ This is a small text
 ```
 
 ```widget
-{ "name" : "image.jade",
+{ "name" : "image.pug",
   "properties" : {
     "src" : "/images/200x200-image.jpg",
     "alt" : "alt-text"
@@ -151,7 +151,7 @@ This is a small text
 ***
 
 ```widget
-{ "name" : "jumbotron.jade",
+{ "name" : "jumbotron.pug",
   "properties" : {
     "title" : "Title",
     "leads" : ["subtitle-1","subtitle-2"],
@@ -162,7 +162,7 @@ This is a small text
 
 ***
 ```widget
-{ "name" : "message.jade",
+{ "name" : "message.pug",
    "properties" : {
       "text"  : "alert message"
    }
@@ -172,7 +172,7 @@ This is a small text
 You can use also a list of element with icons. The list of icon can be found [here](http://getbootstrap.com/components/).
 
 ```widget
-{ "name" : "list.jade",
+{ "name" : "list.pug",
   "properties" : {
     "columns" :[
         [{"title" : " This is a nice title", "text" : "This is a nice text.", "class" : "glyphicon glyphicon-user"},
@@ -185,7 +185,7 @@ You can use also a list of element with icons. The list of icon can be found [he
 ```
 
 ```widget
-{ "name" : "youtube.jade",
+{ "name" : "youtube.pug",
   "properties" : {
     "name"     : "Add a good name or a title for SEO",
     "description" : "Add keywords in this description",

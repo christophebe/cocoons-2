@@ -1,5 +1,5 @@
 {
-  "template": "page.jade",
+  "template": "page.pug",
   "description" : "This is the content of the meta description",
   "title": "This is the meta title of the page"
 }

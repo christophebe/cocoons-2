@@ -2,7 +2,7 @@
 ***
 
 ```widget
-{ "name" : "carousel.jade",
+{ "name" : "carousel.pug",
   "properties" : {
     "id" : "carousel-example-generic",
     "images" : [
@@ -38,7 +38,7 @@ You can insert de following code into a markdown file to display a slider/carous
 
 ```javacript
 
-{ "name" : "carousel.jade",
+{ "name" : "carousel.pug",
   "properties" : {
     "id" : "slider1",
     "images" : [

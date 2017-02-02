@@ -67,7 +67,7 @@ But let's throw in a <b>tag</b>.
 
 
 ```widget
-{ "name" : "call2action.jade",
+{ "name" : "call2action.pug",
   "properties" : {
     "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.",
     "link" : {
@@ -114,7 +114,7 @@ Quote break.
 ## HTML 5 video player
 
 ```widget
-{ "name" : "video.jade",
+{ "name" : "video.pug",
   "properties" : {
     "name"     : "Add a good name or a title for SEO",
     "description" : "Add keywords in this description",

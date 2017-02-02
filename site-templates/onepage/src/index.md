@@ -2,7 +2,7 @@
 ***
 
 ```widget
-{ "name" : "message.jade",
+{ "name" : "message.pug",
   "properties" : {
     "text" : "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
   }
@@ -11,7 +11,7 @@
 
 
 ```widget
-{ "name" : "image-text.jade",
+{ "name" : "image-text.pug",
   "properties" : {
     "title" : "First featurette heading",
     "texts" : [
@@ -36,7 +36,7 @@ Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta f
 ***
 
 ```widget
-{ "name" : "image-text.jade",
+{ "name" : "image-text.pug",
   "properties" : {
     "title" : "First featurette heading",
     "texts" : [
@@ -57,7 +57,7 @@ Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta f
 ```
 
 ```widget
-{ "name" : "message.jade",
+{ "name" : "message.pug",
   "properties" : {
     "text" : "Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper."
     }
@@ -78,7 +78,7 @@ Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta f
 
 
 ```widget
-{ "name" : "call2action-large.jade",
+{ "name" : "call2action-large.pug",
   "properties" : {
     "title" : "This is a call to action ! ",
     "text" : "You can add additional info here",
