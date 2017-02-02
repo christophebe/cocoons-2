@@ -34,7 +34,7 @@ describe('Test Create Site', function() {
 
     });
 
-    it('should return a nice new site in a target folder based on the default template site', function(done) {
+    it('should create a nice new site in a target folder based on the default template site', function(done) {
 
         var siteTemplateName = "";
 
@@ -43,7 +43,7 @@ describe('Test Create Site', function() {
 
                 done(error);
             } else {
-  
+
                 checkSiteDirectories(done);
             }
 

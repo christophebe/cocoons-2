@@ -2,7 +2,7 @@
   "name": "cocoons.io",
   "version": "2.0.0",
   "author": "Christophe Lombart <christophe.lombart@gmail.com>",
-  "description": "Web site generator made for the SEO ! with nodejs, markdown and jade with optionnally cloakings & mindmaps.",
+  "description": "Web site generator made for the SEO ! with nodejs, markdown and pug with optionnally cloakings & mindmaps.",
   "homepage": "http://www.cocoons.io",
   "bin": {
     "cocoons": "./bin/exec.js"
@@ -17,11 +17,12 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "body-parser": "^1.16.0",
     "bunyan": "^1.8.5",
     "express": "^4.14.1",
+    "jsonfile": "^2.4.0",
     "marked": "^0.3.6",
     "ncp": "^2.0.0",
+    "node-json-minify": "^1.0.0",
     "pug": "^0.1.0",
     "rimraf": "^2.5.4",
     "serve-favicon": "^2.3.2",

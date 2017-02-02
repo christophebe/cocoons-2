@@ -1,1 +1,1 @@
-nodemon --exec cocoons preview -e js,json,jade | bunyan -l debug
+nodemon --exec cocoons run -e js,json,jade | bunyan -l debug

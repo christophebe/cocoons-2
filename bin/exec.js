@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-var create   = require('../lib/exec/create.js');
-var preview  = require('../lib/exec/preview.js');
+var create = require('../lib/exec/create');
+var run    = require('../lib/exec/run');
 
 
 /**
@@ -10,7 +10,7 @@ var preview  = require('../lib/exec/preview.js');
  *
  */
 if ( process.argv.length < 3 ) {
-   console.log('Usage: cocoons [create|preview]\n');
+   console.log('Usage: cocoons [create|run]\n');
    return;
 }
 
@@ -34,17 +34,17 @@ switch (process.argv[2]) {
 
 
 
-      case "preview":
+      case "run":
           var projectFolder;
 
           if (process.argv.length === 4) {
             projectFolder = process.argv[3];
           }
-          preview.previewSite(projectFolder);
+          run.start(projectFolder);
           break;
 
 
       default:
-        console.log("Invalid command, use : cocoons [create|preview]");
-          break;
+        console.log("Invalid command, use : cocoons [create|run]");
+        break;
 }
