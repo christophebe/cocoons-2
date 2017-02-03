@@ -17,7 +17,7 @@
      {
        "region" : "scripts",
        "widgets" : [
-         {"order" : 1, "name" : "google-analytics.jade",
+         {"order" : 1, "name" : "google-analytics.pug",
            "properties" :  {
              "gaid" : "UA-xxxx"
            }

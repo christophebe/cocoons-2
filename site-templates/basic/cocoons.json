@@ -17,9 +17,9 @@
 
       {"region" : "sidebar",
        "widgets" : [
-        {"order" : 1, "name" : "contact.jade"},
+        {"order" : 1, "name" : "contact.pug"},
 
-        {"order" : 2, "name" : "call2action-sidebar.jade",
+        {"order" : 2, "name" : "call2action-sidebar.pug",
           "properties" : {
             "intro" : "Hello World ! This a call to action widget",
             "link" : {
@@ -28,7 +28,7 @@
             }
           }
         },
-        {"order" : 3, "name" : "links.jade",
+        {"order" : 3, "name" : "links.pug",
            "properties" : {
             "title" : "Follow us ! ",
             "urls"  : [
@@ -38,7 +38,7 @@
             ]
           }
         },
-        {"order" : 4, "name" : "image.jade",
+        {"order" : 4, "name" : "image.pug",
           "properties" : {
              "src" : "/images/200x200-image.jpg",
              "alt" : "This is an Ads ! "
@@ -50,7 +50,7 @@
       {
        "region" : "scripts",
        "widgets" : [
-         {"order" : 1, "name" : "google-analytics.jade",
+         {"order" : 1, "name" : "google-analytics.pug",
            "properties" :  {
              "gaid" : "UA-xxxx"
            }
