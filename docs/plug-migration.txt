@@ -1,0 +1,5 @@
+How to migration Jade => Plug ?
+
+- use "pug": "2.0.0-beta11", version 0.1.0 doesn't work
+- rename *.jade into *.plug
+- replace {#} by only the variable name, use simple string concat with + 
