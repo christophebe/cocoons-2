@@ -1,4 +1,4 @@
-extends layout
+extends layout.pug
 
 block content-title
   if (page.properties.h1)
@@ -6,5 +6,5 @@ block content-title
     hr
 
 block content
-  
+
     != page.content

@@ -3,9 +3,9 @@ div(id=widget.properties.id class="carousel slide" data-ride="carousel")
     each image,index in widget.properties.images
       case index
         when 0
-          li(class="active", data-target='##{widget.properties.id}', data-slide-to=index)
+          li(class="active", data-target='#' + widget.properties.id, data-slide-to=index)
         default
-          li(data-target='##{widget.properties.id}', data-slide-to=index)
+          li(data-target='#' + widget.properties.id, data-slide-to=index)
   .carousel-inner
     each image,index in widget.properties.images
       case index
@@ -23,7 +23,7 @@ div(id=widget.properties.id class="carousel slide" data-ride="carousel")
           .item
             img(data-src=image.datasrc, alt=image.alt, src=image.src)
 
-  a.left.carousel-control(href='##{widget.properties.id}', role='button', data-slide='prev')
+  a.left.carousel-control(href='#' + widget.properties.id, role='button', data-slide='prev')
     span.glyphicon.glyphicon-chevron-left
-  a.right.carousel-control(href='##{widget.properties.id}', role='button', data-slide='next')
+  a.right.carousel-control(href='#' + widget.properties.id, role='button', data-slide='next')
     span.glyphicon.glyphicon-chevron-right

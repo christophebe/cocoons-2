@@ -2,14 +2,14 @@
 
 doctype html
 html
-  include partials/header
+  include partials/header.pug
 
   body
-    include partials/menu
+    include partials/menu.pug
     div.container
       block content-title
       div.row
         block content
-      include partials/footer
+      include partials/footer.pug
 
-    include partials/scripts
+    include partials/scripts.pug
