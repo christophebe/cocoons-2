@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-var create = require('../lib/exec/create');
-var run    = require('../lib/exec/run');
+let create = require('../lib/exec/create');
+let run    = require('../lib/exec/run');
 
 
 /**
@@ -17,25 +17,19 @@ if ( process.argv.length < 3 ) {
 switch (process.argv[2]) {
 
       case "create":
-          var siteTemplateName;
+          let siteTemplateName;
 
           if (process.argv.length === 4) {
             siteTemplateName = process.argv[3];
           }
-          create.createSite(siteTemplateName, null, (error, status) => {
-              if (error) {
-                console.log("Error during the creation of the site : " + error );
-              }
-              else {
-                console.log("The site is correctly created : " + status);
-              }
-          });
+          create.createSite(siteTemplateName, null)
+            .then(() => console.log("The site is correctly created : " + status))
+            .catch((error) => "Error during the creation of the site : " + error );
+
           break;
 
-
-
       case "run":
-          var projectFolder;
+          let projectFolder;
 
           if (process.argv.length === 4) {
             projectFolder = process.argv[3];
