@@ -3,7 +3,7 @@ const should = require('chai').should();
 const _      = require("underscore");
 const blue   = require('bluebird');
 const fs     = blue.promisifyAll(require("fs"));
-const rimraf = require("rimraf");
+const rimraf = blue.promisify(require("rimraf"));
 const create = require('../lib/exec/create.js');
 
 const TEST_SITE_FOLDER_1 = process.cwd() + "/test/test-new-site";
@@ -14,43 +14,32 @@ const FILES_TO_IGNORE = [".DS_Store", "logs"];
 
 describe('Test Create Site', function() {
 
-
-    after(function(done) {
-          rimraf(TEST_SITE_FOLDER_1, function(error){
-              done(error);
-          });
-
+    after(function() {
+      return rimraf(TEST_SITE_FOLDER_1)
     });
 
-    it('should return an error because the site template does not exist', function(done) {
+    it('should return an error because the site template does not exist', function() {
 
         const siteTemplateName = "xxxx";
 
-        create.createSite(siteTemplateName, TEST_SITE_FOLDER_2)
-          .then(() => done(new Error("This test didn't generate an error")))
-          .catch((error) => done());
+        return create.createSite(siteTemplateName, TEST_SITE_FOLDER_2)
+          .then(() =>  should.fail("Exception not thrown"))
+          .catch((error) => error.should.not.be.null);
     });
 
-    it('should create a nice new site in a target folder based on the default template site', function(done) {
+    it('should create a nice new site in a target folder based on the default template site', function() {
 
         const siteTemplateName = "";
 
-        create.createSite(siteTemplateName, TEST_SITE_FOLDER_1)
-          .then(() => checkSiteDirectories(done))
-          .catch((error) => done(error));
+        return create.createSite(siteTemplateName, TEST_SITE_FOLDER_1)
+          .then(()=> fs.readdirAsync(TEST_SITE_FOLDER_1))
+          .then(files => check(files))
+          .then(diff => diff.should.be.equals(0))
+          .catch(error => error.should.be.undefined);
 
     });
 });
 
-
-function checkSiteDirectories(done) {
-    fs.readdirAsync(TEST_SITE_FOLDER_1)
-      .then((files) => check(files, done))
-      .catch((error) => done());
-}
-
-function check(files){
-  const diff = _.difference(_.difference(files, FILES_TO_IGNORE), FILES_TO_CHECK);
-  assert(diff && diff.length === 0, "The site is not correctly created : directories are missing or invalid");
-
+function check(files) {
+   return Promise.resolve(_.difference(_.difference(files, FILES_TO_IGNORE), FILES_TO_CHECK).length);
 }
