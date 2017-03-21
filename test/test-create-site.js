@@ -20,10 +20,10 @@ describe('Test Create Site', function() {
 
     it('should return an error because the site template does not exist', function() {
 
-        const siteTemplateName = "xxxx";
+        const siteTemplateName = "xxxxx";
 
         return create.createSite(siteTemplateName, TEST_SITE_FOLDER_2)
-          .then(() =>  should.fail("Exception not thrown"))
+          .then(() => should.fail("Exception not thrown"))
           .catch((error) => error.should.not.be.null);
     });
 
@@ -33,13 +33,8 @@ describe('Test Create Site', function() {
 
         return create.createSite(siteTemplateName, TEST_SITE_FOLDER_1)
           .then(()=> fs.readdirAsync(TEST_SITE_FOLDER_1))
-          .then(files => check(files))
-          .then(diff => diff.should.be.equals(0))
-          .catch(error => error.should.be.undefined);
+          .then(files => _.difference(_.difference(files, FILES_TO_IGNORE), FILES_TO_CHECK).length )
+          .then(diff => diff.should.be.equals(0));
 
     });
 });
-
-function check(files) {
-   return Promise.resolve(_.difference(_.difference(files, FILES_TO_IGNORE), FILES_TO_CHECK).length);
-}

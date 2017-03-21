@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-let create = require('../lib/exec/create');
-let run    = require('../lib/exec/run');
+const create = require('../lib/exec/create');
+const run    = require('../lib/exec/run');
 
 
 /**
@@ -17,7 +17,7 @@ if ( process.argv.length < 3 ) {
 switch (process.argv[2]) {
 
       case "create":
-          let siteTemplateName;
+          const siteTemplateName;
 
           if (process.argv.length === 4) {
             siteTemplateName = process.argv[3];
@@ -29,7 +29,7 @@ switch (process.argv[2]) {
           break;
 
       case "run":
-          let projectFolder;
+          const projectFolder;
 
           if (process.argv.length === 4) {
             projectFolder = process.argv[3];
