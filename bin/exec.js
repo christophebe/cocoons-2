@@ -6,7 +6,7 @@ const run    = require('../lib/exec/run');
 /**
  * Global application (command line) used to  :
  * - create    : create a new empty site,
- * - preview   : preview the site on localhost,
+ * - preview   : preview the site on localhost
  *
  */
 if ( process.argv.length < 3 ) {
@@ -17,7 +17,7 @@ if ( process.argv.length < 3 ) {
 switch (process.argv[2]) {
 
       case "create":
-          const siteTemplateName;
+          let siteTemplateName;
 
           if (process.argv.length === 4) {
             siteTemplateName = process.argv[3];
@@ -29,7 +29,7 @@ switch (process.argv[2]) {
           break;
 
       case "run":
-          const projectFolder;
+          let projectFolder;
 
           if (process.argv.length === 4) {
             projectFolder = process.argv[3];
