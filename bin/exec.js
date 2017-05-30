@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+
 const create = require("../lib/exec/create");
 const run = require("../lib/exec/run");
 
@@ -7,7 +8,7 @@ const run = require("../lib/exec/run");
 /**
  * Global application (command line) used to  :
  * - create    : create a new empty site,
- * - preview   : preview the site on localhost,
+ * - preview   : preview the site on localhost
  *
  */
 if (process.argv.length < 3) {

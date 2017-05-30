@@ -12,11 +12,9 @@ const FILES_TO_IGNORE = [".DS_Store", "logs"];
 
 describe("Test Create Site", function() {
 
-
   after(function() {
     return rimraf(TEST_SITE_FOLDER_1);
   });
-
 
   it("should return an error because the site template does not exist", function() {
 
@@ -37,8 +35,10 @@ describe("Test Create Site", function() {
           .then(diff => diff.should.be.equals(0))
           .catch(error => {console.log("Error during creating the site", error); error.should.be.undefined;});
 
+
   });
 });
+
 
 function check(files) {
   return Promise.resolve(_.difference(_.difference(files, FILES_TO_IGNORE), FILES_TO_CHECK).length);
