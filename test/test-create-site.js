@@ -16,13 +16,13 @@ describe("Test Create Site", function() {
     return rimraf(TEST_SITE_FOLDER_1);
   });
 
-  it("should return an error because the site template does not exist", function() {
+  it.only("should return an error because the site template does not exist", function() {
 
     const siteTemplateName = "xxxx";
 
     return create.createSite(siteTemplateName, TEST_SITE_FOLDER_2)
           .then(() => should.fail("Exception not thrown"))
-          .catch((error) => {error.should.not.be.null; });
+          .catch((error) =>  error.should.not.be.null);
   });
 
   it("should create a nice new site in a target folder based on the default template site", function() {
@@ -33,7 +33,7 @@ describe("Test Create Site", function() {
           .then(() => fs.readdirAsync(TEST_SITE_FOLDER_1))
           .then(files => check(files))
           .then(diff => diff.should.be.equals(0))
-          .catch(error => {console.log("Error during creating the site", error); error.should.be.undefined;});
+          .catch(error => error.should.be.undefined);
 
 
   });
