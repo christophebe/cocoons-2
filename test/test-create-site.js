@@ -1,9 +1,9 @@
-const should = require("chai").should();
-const _      = require("underscore");
-const blue   = require("bluebird");
-const fs     = blue.promisifyAll(require("fs"));
-const rimraf = blue.promisify(require("rimraf"));
-const create = require("../lib/exec/create.js");
+const should  = require("chai").should();
+const _       = require("underscore");
+const p       = require("util");
+const readdir = p.promisify(require("fs").readdir);
+const rimraf  = p.promisify(require("rimraf"));
+const create  = require("../lib/exec/create.js");
 
 const TEST_SITE_FOLDER_1 = process.cwd() + "/test/test-new-site";
 const TEST_SITE_FOLDER_2 = process.cwd() + "/test/test-new-site-2";
@@ -30,7 +30,7 @@ describe("Test Create Site", function() {
     const siteTemplateName = "";
 
     return create.createSite(siteTemplateName, TEST_SITE_FOLDER_1)
-          .then(() => fs.readdirAsync(TEST_SITE_FOLDER_1))
+          .then(() => readdir(TEST_SITE_FOLDER_1))
           .then(files => check(files))
           .then(diff => diff.should.be.equals(0))
           .catch(error => error.should.be.undefined);
