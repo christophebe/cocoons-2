@@ -16,7 +16,7 @@ describe("Test Create Site", function() {
     return rimraf(TEST_SITE_FOLDER_1);
   });
 
-  it.only("should return an error because the site template does not exist", function() {
+  it("should return an error because the site template does not exist", function() {
 
     const siteTemplateName = "xxxx";
 
