@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-
-
 const create = require("../lib/exec/create");
 const run = require("../lib/exec/run");
 
