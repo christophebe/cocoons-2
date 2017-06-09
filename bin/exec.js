@@ -15,7 +15,7 @@ if (process.argv.length < 3) {
 }
 
 let siteTemplateName;
-let projectFolder;
+let projectFolder = ".";
 
 switch (process.argv[2]) {
 
@@ -23,7 +23,7 @@ case "create":
   if (process.argv.length === 4) {
     siteTemplateName = process.argv[3];
   }
-  create.createSite(siteTemplateName, null)
+  create.createSite(siteTemplateName)
   .then(() => console.log("The site is correctly created"))
   .catch((error) => "Error during the creation of the site : " + error);
 
