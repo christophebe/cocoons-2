@@ -7,7 +7,7 @@ const create  = require("../lib/exec/create.js");
 
 const TEST_SITE_FOLDER_1 = process.cwd() + "/test/test-new-site";
 const TEST_SITE_FOLDER_2 = process.cwd() + "/test/test-new-site-2";
-const FILES_TO_CHECK = ["public", "src", "templates", "cocoons.json", "preview.sh", "widgets", "pm2.sh"];
+const FILES_TO_CHECK = ["public", "src", "templates", "cocoons.json", "run.sh", "widgets", "pm2.sh"];
 const FILES_TO_IGNORE = [".DS_Store", "logs"];
 
 describe("Test Create Site", function() {
