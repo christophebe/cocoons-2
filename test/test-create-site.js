@@ -33,7 +33,7 @@ describe("Test Create Site", function() {
           .then(() => readdir(TEST_SITE_FOLDER_1))
           .then(files => check(files))
           .then(diff => diff.should.be.equals(0))
-          .catch(error => {console.log(error);error.should.be.undefined;});
+          .catch(error => {error.should.be.undefined;});
 
 
   });

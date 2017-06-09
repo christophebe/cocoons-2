@@ -8,7 +8,7 @@
     "cocoons": "./bin/exec.js"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "CONSOLE_LOG=no mocha",
     "pretest": "rm -rf ./logs"
   },
   "repository": {

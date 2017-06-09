@@ -11,7 +11,6 @@ describe("Test read markdown page and its property file", function() {
 
     return md.readPage(FILE_MD_1)
         .then(page => {
-          //console.log(page);
           page.should.be.not.null;
           page.properties.title.should.equal("this is the title");
           page.content.should.equal("This is the markdown file content \n");})
@@ -33,7 +32,7 @@ describe("Test read markdown page and its property file", function() {
 
     return md.readPage("xxx.md")
         .then(() => should.fail("Exception not thrown"))
-        .catch(error => console.log(error));
+        .catch(error => error.should.not.be.null);
 
   });
 });
