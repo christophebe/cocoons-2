@@ -7,7 +7,7 @@ const create  = require("../lib/exec/create.js");
 
 const TEST_SITE_FOLDER_1 = process.cwd() + "/test/test-new-site";
 const TEST_SITE_FOLDER_2 = process.cwd() + "/test/test-new-site-2";
-const FILES_TO_CHECK = ["public", "src", "templates", "cocoons.json", "preview.sh", "widgets"];
+const FILES_TO_CHECK = ["public", "src", "templates", "cocoons.json", "preview.sh", "widgets", "pm2.sh"];
 const FILES_TO_IGNORE = [".DS_Store", "logs"];
 
 describe("Test Create Site", function() {
@@ -33,7 +33,7 @@ describe("Test Create Site", function() {
           .then(() => readdir(TEST_SITE_FOLDER_1))
           .then(files => check(files))
           .then(diff => diff.should.be.equals(0))
-          .catch(error => error.should.be.undefined);
+          .catch(error => {console.log(error);error.should.be.undefined;});
 
 
   });

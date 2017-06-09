@@ -16,12 +16,16 @@
     "url": "https://github.com/christophebe/cocoons-2.git"
   },
   "dependencies": {
-    "bunyan": "^1.8.5",
+    "babel-eslint": "^6.1.2",
+    "bunyan": "^1.8.10",
+    "eslint": "^3.19.0",
     "express": "^4.15.3",
     "fs-extra": "^3.0.1",
-    "jsonfile": "^2.4.0",
-    "marked": "^0.3.6",
     "helmet": "^3.5.0",
+    "jsonfile": "^2.4.0",
+    "loadtest": "^2.3.0",
+    "marked": "^0.3.6",
+    "nodemon": "^1.11.0",
     "pug": "^2.0.0-beta11",
     "serve-favicon": "^2.3.2",
     "serve-static": "^1.11.2",
@@ -29,7 +33,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0",
+    "mocha": "^3.4.2",
     "rimraf": "^2.5.4"
   },
   "keywords": [
