@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const create = require("../lib/exec/create");
 const run = require("../lib/exec/run");
+const install = require("../lib/exec/install");
 
 
 /**
@@ -10,7 +11,7 @@ const run = require("../lib/exec/run");
  *
  */
 if (process.argv.length < 3) {
-  console.log("Usage: cocoons [create|run]\n");
+  console.log("Usage: cocoons [create|run|install]\n");
   return;
 }
 
@@ -37,6 +38,13 @@ case "run":
   run.start(projectFolder);
   break;
 
+case "install":
+
+  if (process.argv.length !== 4) {
+    console.log("Usage : cocoons install middelware-name");
+  }
+  install.installMiddelware(process.argv[4]);
+  break;
 
 default:
   console.log("Invalid command, use : cocoons [create|run]");
