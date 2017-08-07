@@ -43,10 +43,13 @@ case "install":
   if (process.argv.length !== 4) {
     console.log("Usage : cocoons install middelware-name");
   }
-  install.installMiddelware(process.argv[4]);
+  install.installMiddelware(process.argv[4])
+  .then(() => console.log("The middelware is correctly installed"))
+  .catch((error) => "Error during the installation of the middelware: " + error);
+
   break;
 
 default:
-  console.log("Invalid command, use : cocoons [create|run]");
+  console.log("Invalid command, use : cocoons [create|run|install]");
   break;
 }
