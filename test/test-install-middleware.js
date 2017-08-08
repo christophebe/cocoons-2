@@ -14,7 +14,7 @@ describe("Test install middelware ", function() {
   it.only("should install a middelware available on npm site", function() {
 
     const middelwareName = "cocoons-access";
-
+    this.timeout(20000); 
     return install.installMiddelware(middelwareName)
           .then(() =>  console.log("Check install ....") )
           //.catch(error => {error.should.be.undefined;});
@@ -24,7 +24,8 @@ describe("Test install middelware ", function() {
 
 });
 
-
+/*
 function check(files) {
   return Promise.resolve(_.difference(_.difference(files, FILES_TO_IGNORE), FILES_TO_CHECK).length);
 }
+*/

@@ -42,8 +42,10 @@ case "install":
 
   if (process.argv.length !== 4) {
     console.log("Usage : cocoons install middelware-name");
+    return;
   }
-  install.installMiddelware(process.argv[4])
+
+  install.installMiddelware(process.argv[3])
   .then(() => console.log("The middelware is correctly installed"))
   .catch((error) => "Error during the installation of the middelware: " + error);
 
