@@ -19,14 +19,13 @@ let siteTemplateName;
 let projectFolder = ".";
 
 switch (process.argv[2]) {
-
 case "create":
   if (process.argv.length === 4) {
     siteTemplateName = process.argv[3];
   }
   create.createSite(siteTemplateName)
-  .then(() => console.log("The site is correctly created"))
-  .catch((error) => "Error during the creation of the site : " + error);
+    .then(() => console.log("The site is correctly created"))
+    .catch(error => `Error during the creation of the site : ${error} `);
 
   break;
 
@@ -44,8 +43,8 @@ case "install":
     console.log("Usage : cocoons install middelware-name");
   }
   install.installMiddelware(process.argv[4])
-  .then(() => console.log("The middelware is correctly installed"))
-  .catch((error) => "Error during the installation of the middelware: " + error);
+    .then(() => console.log("The middelware is correctly installed"))
+    .catch(error => `Error during the installation of the middelware : ${error}`);
 
   break;
 
