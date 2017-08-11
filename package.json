@@ -23,6 +23,7 @@
     "helmet": "^3.5.0",
     "jsonfile": "^2.4.0",
     "marked": "^0.3.6",
+    "node-dynamic-import": "0.0.2",
     "pug": "^2.0.0-beta11",
     "serve-favicon": "^2.3.2",
     "serve-static": "^1.11.2",
