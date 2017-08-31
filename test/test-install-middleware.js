@@ -1,27 +1,23 @@
-const should  = require("chai").should();
-const _       = require("underscore");
-const p       = require("util");
+const should = require("chai").should();
+const _ = require("underscore");
+const p = require("util");
 const readdir = p.promisify(require("fs").readdir);
-const rimraf  = p.promisify(require("rimraf"));
-const install  = require("../lib/exec/install.js");
+const rimraf = p.promisify(require("rimraf"));
+const install = require("../lib/exec/install.js");
 
-describe("Test install middelware ", function() {
-
-  after(function() {
-    //return rimraf(TEST_SITE_FOLDER_1);
+describe("Test install middelware ", () => {
+  after(() => {
+    // return rimraf(TEST_SITE_FOLDER_1);
   });
 
-  it.skip("should install a middelware available on npm site", function() {
-
+  it.skip("should install a middelware available on npm site", () => {
     const middelwareName = "cocoons-access";
     this.timeout(20000);
     return install.installMiddelware(middelwareName)
-          .then(() =>  console.log("Check install ....") )
-          //.catch(error => {error.should.be.undefined;});
-          .catch(error => console.log(error));
+      .then(() => console.log("Check install ...."))
+    // .catch(error => {error.should.be.undefined;});
+      .catch(error => console.log(error));
   });
-
-
 });
 
 /*

@@ -7,7 +7,9 @@
     "es6": true,
     "mocha": true
   },
-  "rules": {   
+  "rules": {
+    max-len: ["error", {"code" : 200, "comments": 200 }],
+    no-mixed-operators: ["error", {"allowSamePrecedence": true}],
     "no-console": ["error", { "allow": ["log", "warn", "error"] }],
         "indent": [
             "error",
