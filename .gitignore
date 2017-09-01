@@ -2,8 +2,7 @@ logs
 node_modules
 tags
 target
-todo.txt
-util-ftp-old.js
 test/site-test-mindmap/src
+test/install-middleware/package-lock.json
 npm-debug.log
 proxies.txt

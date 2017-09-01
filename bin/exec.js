@@ -37,14 +37,16 @@ case "run":
   run.start(projectFolder);
   break;
 
+// install = expiremental feature. Normally installing middelwares with npm should be suffisiant
 case "install":
-
   if (process.argv.length !== 4) {
     console.log("Usage : cocoons install middelware-name");
+  } else {
+    install.installMiddelware(process.argv[3])
+      .then(() => console.log(`The middelware ${process.argv[3]} is correctly installed`))
+      .catch(error => `Error during the installation of the middelware : ${error}`);
   }
-  install.installMiddelware(process.argv[4])
-    .then(() => console.log("The middelware is correctly installed"))
-    .catch(error => `Error during the installation of the middelware : ${error}`);
+
 
   break;
 
