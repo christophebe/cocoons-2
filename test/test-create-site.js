@@ -7,9 +7,9 @@ const create = require("../lib/exec/create.js");
 const TEST_SITE_FOLDER_1 = `${process.cwd()}/test/test-new-site`;
 const TEST_SITE_FOLDER_2 = `${process.cwd()}/test/test-new-site-2`;
 const FILES_TO_CHECK = ["public", "src", "templates", "cocoons.json", "package.json", "run.sh", "widgets", "pm2.sh"];
+const FILE_TO_EXCLUDE = ".DS_Store";
 
-
-const check = files => Promise.resolve(FILES_TO_CHECK.length === files.length);
+const check = files => Promise.resolve(FILES_TO_CHECK.length === files.filter(e => e !== FILE_TO_EXCLUDE).length);
 
 describe("Test Create Site", () => {
   after(() => rimraf(TEST_SITE_FOLDER_1));
