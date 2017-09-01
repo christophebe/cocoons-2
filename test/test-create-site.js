@@ -1,5 +1,4 @@
 const should = require("chai").should();
-const _ = require("underscore");
 const p = require("util");
 const readdir = p.promisify(require("fs").readdir);
 const rimraf = p.promisify(require("rimraf"));
@@ -8,9 +7,9 @@ const create = require("../lib/exec/create.js");
 const TEST_SITE_FOLDER_1 = `${process.cwd()}/test/test-new-site`;
 const TEST_SITE_FOLDER_2 = `${process.cwd()}/test/test-new-site-2`;
 const FILES_TO_CHECK = ["public", "src", "templates", "cocoons.json", "run.sh", "widgets", "pm2.sh"];
-const FILES_TO_IGNORE = [".DS_Store", "logs"];
 
-const check = files => Promise.resolve(_.difference(_.difference(files, FILES_TO_IGNORE), FILES_TO_CHECK).length);
+
+const check = files => Promise.resolve(FILES_TO_CHECK.length === files.length);
 
 describe("Test Create Site", () => {
   after(() => rimraf(TEST_SITE_FOLDER_1));
@@ -29,7 +28,7 @@ describe("Test Create Site", () => {
     return create.createSite(siteTemplateName, TEST_SITE_FOLDER_1)
       .then(() => readdir(TEST_SITE_FOLDER_1))
       .then(files => check(files))
-      .then(diff => diff.should.be.equals(0))
+      .then(diff => diff.should.be.true)
       .catch(error => error.should.be.undefined);
   });
 });

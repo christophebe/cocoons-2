@@ -10,7 +10,7 @@ describe("Test install middelware ", () => {
     // return rimraf(TEST_SITE_FOLDER_1);
   });
 
-  it.only("should install a middelware available on npm site", () => {
+  it.skip("should install a middelware available on npm site", () => {
     const middelwareName = "cocoons-access";
     this.timeout(20000);
     return install.installMiddelware(middelwareName)
