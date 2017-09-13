@@ -2,6 +2,7 @@
 const create = require("../lib/exec/create");
 const run = require("../lib/exec/run");
 const install = require("../lib/exec/install");
+const generate = require("../lib/exec/generate");
 
 
 /**
@@ -47,6 +48,16 @@ case "install":
       .catch(error => `Error during the installation of the middelware : ${error}`);
   }
 
+  break;
+
+case "generate":
+
+  if (process.argv.length === 4) {
+    projectFolder = process.argv[3];
+  }
+  generate.generateSite(projectFolder)
+    .then(targetFolder => console.log(`The site is correctly generated in ${targetFolder}`))
+    .catch(error => `Error during the generation of the site : ${error}`);
 
   break;
 
