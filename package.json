@@ -16,18 +16,14 @@
     "url": "https://github.com/christophebe/cocoons-2.git"
   },
   "dependencies": {
-    "bunyan": "^1.8.10",
+    "cocoons-util": "^1.0.0",
     "enpeem": "^2.2.0",
     "express": "^4.15.3",
     "fs-extra": "^3.0.1",
     "helmet": "^3.5.0",
-    "jsonfile": "^2.4.0",
     "marked": "^0.3.6",
-    "node-dynamic-import": "0.0.2",
-    "pug": "^2.0.0-beta11",
     "serve-favicon": "^2.3.2",
-    "serve-static": "^1.11.2",
-    "rimraf": "^2.5.4"
+    "serve-static": "^1.11.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

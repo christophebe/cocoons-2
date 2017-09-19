@@ -12,7 +12,7 @@ const generate = require("../lib/exec/generate");
  *
  */
 if (process.argv.length < 3) {
-  console.log("Usage: cocoons [create|run|install]\n");
+  console.log("Usage: cocoons [create|run|install|generate]\n");
   return;
 }
 
